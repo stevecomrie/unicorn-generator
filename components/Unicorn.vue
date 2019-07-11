@@ -128,7 +128,8 @@
         return {
         }
     },
-    props : [ 
+
+    props : [
         'color1',
         'color2',
         'color3',
@@ -136,10 +137,13 @@
         'color5',
         'color6'
     ],
+
     methods: {
+
     },
+
     components: {
-      
+
     }
   }
 </script>
