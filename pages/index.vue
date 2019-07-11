@@ -95,7 +95,7 @@
 
       getunicorn: function(event) {
         axios
-          .get('https://www.random-unicorn.com/api/generate')
+          .get('https://www.random-unicorn.com/api/v1/generate')
           .then(response => {
             this.name        = response.data.name;
             this.attribute1  = response.data.attribute1;
