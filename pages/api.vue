@@ -9,7 +9,7 @@
     <div class="container">
       <main>
         <div class="content">
-          <h1 class="is-size-1 has-text-primary">
+          <h1 class="is-size-1 title is-spaced">
             Random Unicorn Generator<br>
             API Reference
           </h1>
@@ -126,6 +126,7 @@
   code {
     margin-bottom: 50px;
     font-size: 18px;
+    color: #FF1A47;
   }
 
   code.json {

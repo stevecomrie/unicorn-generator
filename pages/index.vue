@@ -9,7 +9,7 @@
     <div class="container">
       <main>
         <div class="content">
-          <h1 class="is-size-1 has-text-primary">
+          <h1 class="is-size-1 title is-spaced">
             Random Unicorn Generator
           </h1>
           <h2 class="subtitle" v-if="!name">
@@ -44,7 +44,7 @@
           </div>
 
           <div class="links">
-            <button @click="generate()" id="generate" class="button is-primary">{{button}}</button>
+            <button @click="generate()" id="generate" class="button is-large">{{button}}</button>
           </div>
         </div>
       </main>
@@ -83,6 +83,7 @@
           document.querySelector('#generate').disabled = true;
           document.querySelector('#unicorn').classList.add( 'hiding' );
         } else {
+          document.querySelector('#generate').blur();
           this.getunicorn();
         }
       },

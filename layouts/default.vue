@@ -119,8 +119,9 @@
 
     .title {
       font-family   : 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-      color         : #35495e;
+      color         : #2E8DDC;
       letter-spacing: 1px;
+      //color         : #00A88F;
     }
 
     .subtitle {
@@ -135,6 +136,16 @@
       font-weight: 300;
       font-size  : 1.25em;
       margin-bottom : 0;
+    }
+
+    button {
+      background: #EC5541;
+      color: #fff;
+
+      &:hover {
+        background: darken( #EC5541, 5% );
+        color: #fff;
+      }
     }
   }
 
