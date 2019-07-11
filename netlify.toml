@@ -1,5 +1,5 @@
 [[redirects]]
-  from = "/api/generate"
-  to = "/.netlify/functions/generate"
+  from = "/api/v1/generate"
+  to = "/.netlify/functions/generate-v1"
   status = 200
   force = true

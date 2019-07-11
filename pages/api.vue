@@ -2,50 +2,43 @@
   <div>
     <header>
       <ul>
-        <li><nuxt-link to="/"    class="active">home</nuxt-link></li>
-        <li><nuxt-link to="/api">api</nuxt-link></li>
+        <li><nuxt-link to="/"   >home</nuxt-link></li>
+        <li><nuxt-link to="/api"  class="active">api</nuxt-link></li>
       </ul>
     </header>
     <div class="container">
       <main>
         <div class="content">
           <h1 class="is-size-1 has-text-primary">
-            Random Unicorn Generator
+            Random Unicorn Generator<br>
+            API Reference
           </h1>
+
           <h2 class="subtitle" v-if="!name">
-            Click the button below to generate a random unicorn!
+            You can generate a random unicorn via the API by making a GET request to the following endpoint:
           </h2>
 
-          <div id="unicorn" @transitionend="load()">
-            <div v-if="name">
-              <p class="subtitle">
-                Meet <strong>{{name}}</strong>!<br>
-              </p>
-            </div>
+          <code>
+            https://www.random-unicorn.com/api/v1/generate
+          </code>
 
-            <div class="unicorn" v-if="showUnicorn">
+          <h3>Sample JSON Output</h3>
 
-              <Unicorn
-                :color1="color1"
-                :color2="color2"
-                :color3="color3"
-                :color4="color4"
-                :color5="color5"
-                :color6="color6"
-              />
+          <code class="json">
+            <pre>
+{
+   name : "Zephyra"
+   attribute1 : "relaxed"
+   attribute2 : "patient"
+   color1 : "#48e17c"
+   color2 : "#0df2c5"
+   color3 : "#41079a"
+   color4 : "#fa9a37"
+   color5 : "#c3805c"
+   color6 : "#4b5a96"
+}</pre>
+          </code>
 
-            </div>
-
-            <div v-if="name">
-              <h3>
-                {{name}} is a very {{attribute1}} and {{attribute2}} unicorn.
-              </h3>
-            </div>
-          </div>
-
-          <div class="links">
-            <button @click="generate()" id="generate" class="button is-primary">{{button}}</button>
-          </div>
         </div>
       </main>
     </div>
@@ -122,18 +115,34 @@
 </script>
 
 <style lang="scss" scoped>
-  #unicorn {
-    margin    : 0 12px;
-    transition: all 0.3s ease;
-    opacity   : 1;
 
-    &.hiding {
-      opacity: 0;
+  div.content {
+    h3 {
+      margin-top: 50px;
+      margin-bottom : 10px;
     }
   }
 
-  svg {
-    max-height: 60vh;
-    margin-top: 20px;
+  code {
+    margin-bottom: 50px;
+    font-size: 18px;
   }
+
+  code.json {
+    display: block;
+    background: #333;
+    margin    : 0 auto;
+    max-width : 300px;
+    text-align: left;
+    padding   : 20px;
+
+    pre {
+      background : transparent;
+      color      : #fff;
+      padding    : 0;
+      font-family: monospace;
+      font-size  : 14px;
+    }
+  }
+
 </style>
