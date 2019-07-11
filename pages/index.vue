@@ -26,8 +26,6 @@
           :color6="randomcolor()"
         />
 
-
-
       </div>
 
       <div class="links">
