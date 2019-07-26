@@ -1,7 +1,6 @@
 exports.handler = (event, context, callback) => {
 
-    let response = {
-		direct  : TEST_VARIABLE,
+    let testObj = {
 		process : process.env.TEST_VARIABLE
     }
 
@@ -11,7 +10,7 @@ exports.handler = (event, context, callback) => {
         	'content-type': 'application/json',
             'Access-Control-Allow-Origin': '*',
         },
-		body: JSON.stringify(response)
+		body: JSON.stringify(testObj)
 	});
 
 };
